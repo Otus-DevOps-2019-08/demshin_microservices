@@ -1,6 +1,7 @@
 # demshin_microservices
 
 demshin microservices repository
+[![Build Status](https://travis-ci.com/Otus-DevOps-2019-08/demshin_microservices.svg?branch=master)](https://travis-ci.com/Otus-DevOps-2019-08/demshin_microservices)
 
 [TOC]
 
