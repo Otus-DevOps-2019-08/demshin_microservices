@@ -1,0 +1,15 @@
+REPOSITORY                TAG                 IMAGE ID            CREATED             SIZE
+demshin/ubuntu-tmp-file   latest              cec09b054294        7 seconds ago       124MB
+ubuntu                    16.04               96da9143fb18        8 hours ago         124MB
+hello-world               latest              fce289e99eb9        12 months ago       1.84kB
+
+
+Task with *.
+Сравните вывод двух следующих команд
+>docker inspect <u_container_id>
+>docker inspect <u_image_id>
+
+1. image явяется родителем container
+2. image описывает глобальные параметры, необходимые для работы container
+3. В блоке image сontainer'а указан ID Image
+4. Глобальные параметры Image описывают архитектуру, тип ОС, пути к рабочим директориям, переменные окружения, список слоев, параметры запуска container'а и будут влиять на все container'ы, использующие его, как родителя.
