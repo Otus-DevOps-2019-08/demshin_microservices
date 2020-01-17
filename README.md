@@ -1,8 +1,27 @@
 # demshin_microservices
 
 demshin microservices repository
+[![Build Status](https://travis-ci.com/Otus-DevOps-2019-08/demshin_microservices.svg?branch=master)](https://travis-ci.com/Otus-DevOps-2019-08/demshin_microservices)
 
 [TOC]
+
+## Homework-12. Docker-3
+
+1. Add `Dockerfile`s
+2. Add linter for `Dockerfile`s & use it.
+3. Build & run app.
+4. Build & run app with new network aliases (using `--env'). Task with *.
+
+```bash
+docker network create reddit
+docker run -d --network=reddit --network-alias=postdb --network-alias=commentdb mongo:latest
+docker run -d --network=reddit --env POST_DATABASE_HOST=postdb --network-alias=postapp demshin/post:1.0
+docker run -d --network=reddit --env COMMENT_DATABASE_HOST=commentdb --network-alias=commentapp demshin/comment:1.0
+docker run -d --network=reddit --env COMMENT_SERVICE_HOST=commentapp --env POST_SERVICE_HOST=postapp -p 9292:9292 demshin/ui:1.0
+```
+
+5. Optimize images. Based on Alpine (task with *).
+6. Add volume to mongo.
 
 ## Homework-11. Docker-2
 
