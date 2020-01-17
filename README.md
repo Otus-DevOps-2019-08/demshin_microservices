@@ -5,6 +5,18 @@ demshin microservices repository
 
 [TOC]
 
+## Homework-13. Docker-4. Docker-compose.
+
+1. Work with docker networks.
+   1. None network driver.
+   2. Host network driver.
+   3. Bridge network driver.
+2. Docker-compose
+   1. Use few networks at `docker-compose.yml`.
+   2. Set env variables at `.env` file. See at the `.env.example`.
+   3. By default, docker compose bases the project name on basename of the directory compose commands are run from. The project name can be overridden either by passing a `-p` / `--project-name` option for each command or setting the `COMPOSE_PROJECT_NAME` environment variable. For example: `docker-compose -p demshin_otus_project`.
+   4. Task with *. See `docker-compose.override.yml`.
+
 ## Homework-12. Docker-3
 
 1. Add `Dockerfile`s
