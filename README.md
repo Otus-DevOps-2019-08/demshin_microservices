@@ -3,9 +3,17 @@
 demshin microservices repository
 [![Build Status](https://travis-ci.com/Otus-DevOps-2019-08/demshin_microservices.svg?branch=master)](https://travis-ci.com/Otus-DevOps-2019-08/demshin_microservices)
 
-[TOC]
+## Homework-14. Gitlab CI
 
-## Homework-13. Docker-4. Docker-compose.
+1. Create an instance for Gitlab CI with terraform (also with remote exec provisioner).
+2. Install Gitlab CI (omnibus).
+3. Setup Gitlab CI (create group, project).
+4. ```docker run -d --name gitlab-runner --restart always --docker-privileged true\
+-v /srv/gitlab-runner/config:/etc/gitlab-runner\
+-v /var/run/docker.sock:/var/run/docker.sock\
+gitlab/gitlab-runner:latest```
+
+## Homework-13. Docker-4. Docker-compose
 
 1. Work with docker networks.
    1. None network driver.
