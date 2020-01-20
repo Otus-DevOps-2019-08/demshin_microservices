@@ -1,8 +1,7 @@
 image: ruby:2.4.2
 
-variables:
-  DOCKER_DRIVER: overlay
-  DOCKER_HOST: tcp://docker:2375
+services:
+  - docker:18.09.7-dind
 
 stages:
   - build
