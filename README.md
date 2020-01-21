@@ -8,10 +8,15 @@ demshin microservices repository
 1. Create an instance for Gitlab CI with terraform (also with remote exec provisioner).
 2. Install Gitlab CI (omnibus).
 3. Setup Gitlab CI (create group, project).
-4. ```docker run -d --name gitlab-runner --restart always --docker-privileged true\
--v /srv/gitlab-runner/config:/etc/gitlab-runner\
--v /var/run/docker.sock:/var/run/docker.sock\
-gitlab/gitlab-runner:latest```
+4. Setup Gitlab Runner
+5. Reconfigure `.gitlab-ci.yml`
+   1. Add reddit application.
+   2. Add unit tests for reddit application.
+   3. Add environments.
+      1. Dev (autodeploy)
+      2. Production & staging (manual deploy with git semver tags).
+      3. Dynamic
+
 
 ## Homework-13. Docker-4. Docker-compose
 
