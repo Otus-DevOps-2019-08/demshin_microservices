@@ -15,7 +15,7 @@ resource "google_compute_instance" "app" {
   boot_disk {
     initialize_params {
       size  = 100
-      image = "ubuntu-1604-lts"
+      image = "ubuntu-1804-lts"
     }
   }
   network_interface {
