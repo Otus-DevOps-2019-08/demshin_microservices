@@ -16,7 +16,11 @@ demshin microservices repository
       1. Dev (autodeploy)
       2. Production & staging (manual deploy with git semver tags).
       3. Dynamic
-
+6. Task with *. Build app. See `.gitlab-ci.yml`.
+7. Task with *. Multiple Gitlab Runners.
+   1. Simple way. Run `.gitlab-ci/scripts/gitlab_runner.sh` on server.
+   2. Better way. Use [ansible role](https://github.com/riemers/ansible-gitlab-runner).
+8. Task with *. Slack integration [`#aleksandr_demshin`](https://devops-team-otus.slack.com/archives/CBA32AEH5).
 
 ## Homework-13. Docker-4. Docker-compose
 
