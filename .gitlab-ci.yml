@@ -15,13 +15,16 @@ before_script:
   - bundle install
 
 build_job:
-  image: docker/compose:latest
+  image: docker:19.03.1
   stage: build
+  services:
+    - docker:dind
   before_script:
-    - cd src
+    - cd reddit
   script:
-    - docker-compose build
-    - docker-compose push
+    - docker build -t $LOGIN/reddit:$CI_COMMIT_VERSION .
+    - docker login -u $LOGIN -p $PASSWORD
+    - docker push $LOGIN/reddit:$CI_COMMIT_VERSION
 
 test_unit_job:
   stage: test
