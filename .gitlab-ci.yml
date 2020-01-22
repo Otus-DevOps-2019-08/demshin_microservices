@@ -20,7 +20,7 @@ build_job:
   services:
     - docker:dind
   before_script:
-    - cd reddit
+    - cd docker-monolith
   script:
     - docker build -t demshin/reddit:$CI_COMMIT_SHORT_SHA .
     - docker login -u $LOGIN -p $PASSWORD
