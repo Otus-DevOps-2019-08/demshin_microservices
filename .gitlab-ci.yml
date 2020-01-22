@@ -17,8 +17,6 @@ before_script:
 build_job:
   image: docker/compose:latest
   stage: build
-  services:
-    - docker:dind
   before_script:
     - cd src
   script:
