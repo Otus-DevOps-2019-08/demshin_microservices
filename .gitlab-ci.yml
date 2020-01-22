@@ -15,7 +15,7 @@ before_script:
   - bundle install
 
 build_job:
-  image: docker:19.03.1
+  image: docker/compose:latest
   stage: build
   services:
     - docker:dind
