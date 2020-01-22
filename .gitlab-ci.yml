@@ -20,11 +20,14 @@ build_job:
   services:
     - docker:dind
   before_script:
-    - cd docker-monolith
+    - docker info
+    - sudo curl -L "https://github.com/docker/compose/releases/download/1.25.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    - sudo chmod +x /usr/local/bin/docker-compose
   script:
-    - docker build -t demshin/reddit:1.0 .
+    - cd src
+    - docker-compose build
     - docker login -u $LOGIN -p $PASSWORD
-    - docker push demshin/reddit:1.0
+    - docker-compose push
 
 test_unit_job:
   stage: test
