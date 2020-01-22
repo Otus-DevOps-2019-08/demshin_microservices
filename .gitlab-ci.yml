@@ -1,4 +1,4 @@
-image: compose:latest
+image: docker/compose:latest
 
 stages:
   - build
