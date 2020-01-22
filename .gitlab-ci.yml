@@ -1,4 +1,4 @@
-image: docker/compose:debian-v1.25.2
+image: ruby:2.4.2
 
 stages:
   - build
@@ -11,14 +11,17 @@ variables:
   DATABASE_URL: 'mongodb://mongo/user_posts'
 
 before_script:
-  - docker login -u $USER -p $PASSWORD
   - cd reddit
   - bundle install
 
 build_job:
+  image: docker:19.03.1
   stage: build
-  script:
+  services:
+    - docker:dind
+  before_script:
     - cd src
+  script:
     - docker-compose build
     - docker-compose push
 
