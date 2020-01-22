@@ -1,4 +1,4 @@
-image: docker/compose:latest
+image: docker/compose:debian-v1.25.2
 
 stages:
   - build
