@@ -3,6 +3,16 @@
 demshin microservices repository
 [![Build Status](https://travis-ci.com/Otus-DevOps-2019-08/demshin_microservices.svg?branch=master)](https://travis-ci.com/Otus-DevOps-2019-08/demshin_microservices)
 
+## Homework-15. Monitoring-1. Prometheus
+
+1. Run Prometheus on docker.
+2. Configure Prometheus.
+3. Run microservices with Prometheus.
+4. Add aliases for hosts at `docker-compose.yml`.
+5. Experimenting with stop/start services.
+6. Get metrics from host. Add node-exporter.
+7. Push docker images to Docker Hub.
+
 ## Homework-14. Gitlab CI
 
 1. Create an instance for Gitlab CI with terraform (also with remote exec provisioner).

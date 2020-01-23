@@ -49,6 +49,21 @@ services:
     networks:
       - back_net
       - front_net
+  node_exporter:
+    image: prom/node-exporter:v0.18.1
+    user: root
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.sysfs=/host/sys'
+      - '--collector.filesystem.ignored-mount-points="^/(sys|proc|dev|host|etc)($$|/)"'
+    networks:
+      back_net:
+        aliases:
+          - node-exporter
 
 volumes:
   post_db:
