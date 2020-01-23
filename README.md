@@ -12,6 +12,7 @@ demshin microservices repository
 5. Experimenting with stop/start services.
 6. Get metrics from host. Add node-exporter.
 7. Push docker images to Docker Hub.
+8. Task with *. Add [percona/mongodb_exporter](https://github.com/percona/mongodb_exporter), [docker image](https://hub.docker.com/r/forekshub/percona-mongodb-exporter/).
 
 ## Homework-14. Gitlab CI
 
