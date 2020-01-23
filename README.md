@@ -3,9 +3,26 @@
 demshin microservices repository
 [![Build Status](https://travis-ci.com/Otus-DevOps-2019-08/demshin_microservices.svg?branch=master)](https://travis-ci.com/Otus-DevOps-2019-08/demshin_microservices)
 
-[TOC]
+## Homework-14. Gitlab CI
 
-## Homework-13. Docker-4. Docker-compose.
+1. Create an instance for Gitlab CI with terraform (also with remote exec provisioner).
+2. Install Gitlab CI (omnibus).
+3. Setup Gitlab CI (create group, project).
+4. Setup Gitlab Runner
+5. Reconfigure `.gitlab-ci.yml`
+   1. Add reddit application.
+   2. Add unit tests for reddit application.
+   3. Add environments.
+      1. Dev (autodeploy)
+      2. Production & staging (manual deploy with git semver tags).
+      3. Dynamic
+6. Task with *. Build app. See `.gitlab-ci.yml`.
+7. Task with *. Multiple Gitlab Runners.
+   1. Simple way. Run `.gitlab-ci/scripts/gitlab_runner.sh` on server.
+   2. Better way. Use [ansible role](https://github.com/riemers/ansible-gitlab-runner).
+8. Task with *. Slack integration [`#aleksandr_demshin`](https://devops-team-otus.slack.com/archives/CBA32AEH5).
+
+## Homework-13. Docker-4. Docker-compose
 
 1. Work with docker networks.
    1. None network driver.
