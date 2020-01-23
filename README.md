@@ -14,6 +14,7 @@ demshin microservices repository
 7. Push docker images to Docker Hub.
 8. Task with *. Add [percona/mongodb_exporter](https://github.com/percona/mongodb_exporter), [docker image](https://hub.docker.com/r/forekshub/percona-mongodb-exporter/).
 9. Task with *. Add cloudprober.
+10. Task with *. Add `Makefile` with build & push commands.
 
 ## Homework-14. Gitlab CI
 
