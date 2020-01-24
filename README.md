@@ -3,6 +3,11 @@
 demshin microservices repository
 [![Build Status](https://travis-ci.com/Otus-DevOps-2019-08/demshin_microservices.svg?branch=master)](https://travis-ci.com/Otus-DevOps-2019-08/demshin_microservices)
 
+## Homework-16. Monitoring-2. Monitoring of infrastructure & application.
+
+1. Separate `docker-compose.yml`.
+2. 
+
 ## Homework-15. Monitoring-1. Prometheus
 
 1. Run Prometheus on docker.
