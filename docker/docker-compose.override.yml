@@ -6,7 +6,6 @@ services:
     volumes:
       - post_db:/data/db
   ui:
-    build: ./ui
     image: ${USERNAME}/ui:${UI_VERSION}
     ports:
       - ${UI_PORT}:9292/tcp
@@ -14,12 +13,10 @@ services:
       - ui:/app
     command: ["puma","--debug","-w","2"]
   post:
-    build: ./post-py
     image: ${USERNAME}/post:${POST_VERSION}
     volumes:
       - post:/app
   comment:
-    build: ./comment
     image: ${USERNAME}/comment:${COMMENT_VERSION}
     volumes:
       - comment:/app
