@@ -37,7 +37,7 @@ services:
     environment:
       - MONGODB_URL=mongodb://mongodb:27017
     networks:
-      back_net:
+      prometheus_net:
         aliases:
           - mongodb-exporter
   cloudprober:
@@ -46,9 +46,48 @@ services:
       prometheus_net:
         aliases:
           - cloudprober-exporter
+  cadvisor:
+    image: google/cadvisor:v0.33.0
+    volumes:
+      - '/:/rootfs:ro'
+      - '/var/run:/var/run:rw'
+      - '/sys:/sys:ro'
+      - '/var/lib/docker/:/var/lib/docker:ro'
+    ports:
+      - '8080:8080'
+    networks:
+      prometheus_net:
+        aliases:
+          - cadvisor
+  grafana:
+    image: grafana/grafana:6.5.3
+    volumes:
+      - grafana_data:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=secret
+    depends_on:
+      - prometheus
+    ports:
+      - 3000:3000
+    networks:
+      prometheus_net:
+        aliases:
+          - grafana
+  alertmanager:
+    image: ${USERNAME}/alertmanager
+    command:
+      - '--config.file=/etc/alertmanager/config.yml'
+    ports:
+      - 9093:9093
+    networks:
+      prometheus_net:
+        aliases:
+          - alertmanager
 
 volumes:
   prometheus_data:
+  grafana_data:
 
 networks:
   prometheus_net:

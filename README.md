@@ -5,8 +5,13 @@ demshin microservices repository
 
 ## Homework-16. Monitoring-2. Monitoring of infrastructure & application.
 
-1. Separate `docker-compose.yml`.
-2. 
+1. Separate `docker-compose.yml` on two files (application & monitoring).
+2. Add [cadvisor](https://github.com/google/cadvisor).
+3. Add Grafana.
+   1. Import dashboards.
+   2. Create my own dashboards.
+   3. Alerting.
+4. [My Docker Hub](https://hub.docker.com/u/demshin)
 
 ## Homework-15. Monitoring-1. Prometheus
 
