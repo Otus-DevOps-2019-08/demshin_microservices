@@ -11,7 +11,10 @@ demshin microservices repository
    1. Import dashboards.
    2. Create my own dashboards.
    3. Alerting.
-4. [My Docker Hub](https://hub.docker.com/u/demshin)
+4. [My Docker Hub](https://hub.docker.com/u/demshin).
+5. Tasks with *.
+   1. Add commands for build & push to Makefile.
+   2. 
 
 ## Homework-15. Monitoring-1. Prometheus
 
