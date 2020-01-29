@@ -84,10 +84,37 @@ services:
       prometheus_net:
         aliases:
           - alertmanager
+  influxdb:
+    image: influxdb:1.7.9
+    volumes:
+      - influxdb_data:/var/lib/influxdb
+    ports:
+      - 8083:8083
+      - 8086:8086
+      - 8090:8090
+    networks:
+      prometheus_net:
+        aliases:
+          - influxdb
+  telegraf:
+    image: ${USERNAME}/telegraf
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 8125:8125
+      - 8092:8092
+      - 8094:8094
+      - 9273:9273
+    networks:
+      prometheus_net:
+        aliases:
+          - telegraf
+
 
 volumes:
   prometheus_data:
   grafana_data:
+  influxdb_data:
 
 networks:
   prometheus_net:
