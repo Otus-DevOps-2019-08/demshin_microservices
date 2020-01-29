@@ -9,3 +9,12 @@ groups:
       annotations:
         description: '{{ $labels.instance }} of job {{ $labels.job }} has been down for more than 1 minute'
         summary: 'Instance {{ $labels.instance }} down'
+    
+    - alert: HttpRequestsSlow
+      expr: histogram_quantile(0.95, rate(etcd_http_successful_duration_seconds_bucket[5m])) > 0.15
+      for: 5m
+      labels:
+        severity: warning
+      annotations:
+        description: "HTTP requests slowing down, 99th percentil is over 0.15s for 5 minutes\n  VALUE = {{ $value }}\n  LABELS: {{ $labels }}"
+        summary: "HTTP requests slow (instance {{ $labels.instance }})"
