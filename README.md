@@ -12,9 +12,24 @@ demshin microservices repository
    2. Create my own dashboards.
    3. Alerting.
 4. [My Docker Hub](https://hub.docker.com/u/demshin).
-5. Tasks with *.
-   1. Add commands for build & push to Makefile.
-   2. 
+
+### Tasks with *
+
+1. Add commands for build & push to Makefile.
+2. Docker experimental mode (data for prometheus).
+   1. Setup docker daemon on host.
+
+```json
+      {
+            "metrics-addr" : "0.0.0.0:9323",
+            "experimental" : true
+      }
+```
+
+   2. Setup Prometheus. See at `prometheus.yml`.
+   3. Add [dashboard](https://grafana.com/grafana/dashboards/1229) to grafana. See at `./monitoring/grafana/dashboards/Engine_Daemon_Monitoring.json`.
+3. Add Telegraf & InfluxDB, also add [dashboard](https://grafana.com/grafana/dashboards/10585) `Docker_Telegraf_Monitoring.json`.
+4. Add HTTP requests slowing down, 95th percentile is over 0.15s for 5 minutes. See at `alerts.yml`.
 
 ## Homework-15. Monitoring-1. Prometheus
 
