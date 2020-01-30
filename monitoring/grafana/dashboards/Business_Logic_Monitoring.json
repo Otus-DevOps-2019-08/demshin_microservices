@@ -23,7 +23,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus Servser",
+      "datasource": "Prometheus",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -67,7 +67,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Business_Logic_Monitoring",
+      "title": "Business Logic Monitoring",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -117,7 +117,7 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Business_Logic_Monitoring",
+  "title": "Business Logic Monitoring",
   "uid": "1vx0NTsZz",
   "version": 2
 }
