@@ -60,7 +60,7 @@ services:
         aliases:
           - cadvisor
   grafana:
-    image: grafana/grafana:6.5.3
+    image: ${USERNAME}/grafana
     volumes:
       - grafana_data:/var/lib/grafana
     environment:
