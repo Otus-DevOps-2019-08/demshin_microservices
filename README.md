@@ -29,7 +29,7 @@ demshin microservices repository
    2. Setup Prometheus. See at `prometheus.yml`.
    3. Add [dashboard](https://grafana.com/grafana/dashboards/1229) to grafana. See at `./monitoring/grafana/dashboards/Engine_Daemon_Monitoring.json`.
 3. Add Telegraf & InfluxDB, also add [dashboard](https://grafana.com/grafana/dashboards/10585) `Docker_Telegraf_Monitoring.json`.
-4. Add HTTP requests slowing down, 95th percentile is over 0.15s for 5 minutes. See at `alerts.yml`.
+4. Add HTTP requests slowing down, 95th percentile is over 0.15s for 5 minutes. See at `alerts.yml`. I decided not to do the alerts on e-mail, because email alerting is not good practice in 2019.
 
 ## Homework-15. Monitoring-1. Prometheus
 
