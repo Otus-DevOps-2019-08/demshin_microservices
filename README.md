@@ -3,7 +3,12 @@
 demshin microservices repository
 [![Build Status](https://travis-ci.com/Otus-DevOps-2019-08/demshin_microservices.svg?branch=master)](https://travis-ci.com/Otus-DevOps-2019-08/demshin_microservices)
 
-## Homework-16. Monitoring-2. Monitoring of infrastructure & application.
+## Homework-17. Logging-1. Logging & tracing
+
+1. Update reddit app & build new docker images with `logging` tag.
+2. 
+
+## Homework-16. Monitoring-2. Monitoring of infrastructure & application
 
 1. Separate `docker-compose.yml` on two files (application & monitoring).
 2. Add [cadvisor](https://github.com/google/cadvisor).
