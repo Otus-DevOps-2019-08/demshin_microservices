@@ -9,7 +9,7 @@ demshin microservices repository
 2. Fluentd init setup.
 3. Filters for fluentd.
 4. Task with *. Additional grok for fluentd.
-5. 
+5. Add zipkin.
 
 ## Homework-16. Monitoring-2. Monitoring of infrastructure & application
 
