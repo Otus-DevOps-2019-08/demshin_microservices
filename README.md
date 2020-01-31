@@ -8,7 +8,8 @@ demshin microservices repository
 1. Update reddit app & build new docker images with `logging` tag.
 2. Fluentd init setup.
 3. Filters for fluentd.
-4. 
+4. Task with *. Additional grok for fluentd.
+5. 
 
 ## Homework-16. Monitoring-2. Monitoring of infrastructure & application
 
