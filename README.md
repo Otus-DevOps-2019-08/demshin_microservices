@@ -6,7 +6,9 @@ demshin microservices repository
 ## Homework-17. Logging-1. Logging & tracing
 
 1. Update reddit app & build new docker images with `logging` tag.
-2. 
+2. Fluentd init setup.
+3. Filters for fluentd.
+4. 
 
 ## Homework-16. Monitoring-2. Monitoring of infrastructure & application
 
