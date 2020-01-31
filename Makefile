@@ -42,3 +42,5 @@ run_app:
 	cd docker && docker-compose -f docker-compose.yml up -d
 run_monitoring:
 	cd docker && docker-compose -f docker-compose-monitoring.yml up -d
+run_logging:
+	cd docker && docker-compose -f docker-compose-logging.yml up -d
