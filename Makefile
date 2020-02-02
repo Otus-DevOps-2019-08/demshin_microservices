@@ -16,6 +16,8 @@ build_grafana:
 	export USER_NAME=${USER_NAME} && cd monitoring/grafana && docker build -t ${USER_NAME}/grafana .
 build_telegraf:
 	export USER_NAME=${USER_NAME} && cd monitoring/telegraf && docker build -t ${USER_NAME}/telegraf .
+build_fluentd:
+	export USER_NAME=${USER_NAME} && cd logging/fluentd && docker build -t ${USER_NAME}/fluentd .
 
 push_comment:
 	docker push ${USER_NAME}/comment
@@ -33,8 +35,12 @@ push_grafana:
 	docker push ${USER_NAME}/grafana
 push_telegraf:
 	docker push ${USER_NAME}/telegraf
+push_fluentd:
+	docker push ${USER_NAME}/fluentd
 
 run_app:
 	cd docker && docker-compose -f docker-compose.yml up -d
 run_monitoring:
 	cd docker && docker-compose -f docker-compose-monitoring.yml up -d
+run_logging:
+	cd docker && docker-compose -f docker-compose-logging.yml up -d
