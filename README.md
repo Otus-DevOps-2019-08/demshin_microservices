@@ -3,6 +3,38 @@
 demshin microservices repository
 [![Build Status](https://travis-ci.com/Otus-DevOps-2019-08/demshin_microservices.svg?branch=master)](https://travis-ci.com/Otus-DevOps-2019-08/demshin_microservices)
 
+## Homework-16. Monitoring-2. Monitoring of infrastructure & application.
+
+1. Separate `docker-compose.yml` on two files (application & monitoring).
+2. Add [cadvisor](https://github.com/google/cadvisor).
+3. Add Grafana.
+   1. Import dashboards.
+   2. Create my own dashboards.
+   3. Alerting.
+4. [My Docker Hub](https://hub.docker.com/u/demshin).
+
+### Tasks with *
+
+1. Add commands for build & push to Makefile.
+2. Docker experimental mode (data for prometheus).
+   1. Setup docker daemon on host.
+
+```json
+      {
+            "metrics-addr" : "0.0.0.0:9323",
+            "experimental" : true
+      }
+```
+
+   2. Setup Prometheus. See at `prometheus.yml`.
+   3. Add [dashboard](https://grafana.com/grafana/dashboards/1229) to grafana. See at `./monitoring/grafana/dashboards/Engine_Daemon_Monitoring.json`.
+3. Add Telegraf & InfluxDB, also add [dashboard](https://grafana.com/grafana/dashboards/10585) `Docker_Telegraf_Monitoring.json`.
+4. Add HTTP requests slowing down, 95th percentile is over 0.15s for 5 minutes. See at `alerts.yml`. I decided not to do the alerts on e-mail, because email alerting is not good practice in 2019.
+
+## Tasks with **
+
+1. Provisioning of Grafana (datasources & dashboards).
+
 ## Homework-15. Monitoring-1. Prometheus
 
 1. Run Prometheus on docker.

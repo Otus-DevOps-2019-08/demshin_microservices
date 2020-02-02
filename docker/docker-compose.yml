@@ -10,6 +10,8 @@ services:
         aliases:
           - post_db
           - comment_db
+      prometheus_net:
+        aliases:
           - mongodb
   ui:
     image: ${USERNAME}/ui:${UI_VERSION}
@@ -17,6 +19,9 @@ services:
       - ${UI_PORT}:9292/tcp
     networks:
       front_net:
+        aliases:
+          - ui
+      prometheus_net:
         aliases:
           - ui
   post:
@@ -28,6 +33,9 @@ services:
       back_net:
         aliases:
           - post
+      prometheus_net:
+        aliases:
+          - post
   comment:
     image: ${USERNAME}/comment:${COMMENT_VERSION}
     networks:
@@ -37,55 +45,14 @@ services:
       back_net:
         aliases:
           - comment
-  prometheus:
-    image: ${USERNAME}/prometheus
-    ports:
-      - '9090:9090'
-    volumes:
-      - prometheus_data:/prometheus
-    command:
-      - '--config.file=/etc/prometheus/prometheus.yml'
-      - '--storage.tsdb.path=/prometheus'
-      - '--storage.tsdb.retention=1d'
-    networks:
-      - back_net
-      - front_net
-  node_exporter:
-    image: prom/node-exporter:v0.18.1
-    user: root
-    volumes:
-      - /proc:/host/proc:ro
-      - /sys:/host/sys:ro
-      - /:/rootfs:ro
-    command:
-      - '--path.procfs=/host/proc'
-      - '--path.sysfs=/host/sys'
-      - '--collector.filesystem.ignored-mount-points="^/(sys|proc|dev|host|etc)($$|/)"'
-    networks:
-      back_net:
+      prometheus_net:
         aliases:
-          - node-exporter
-  mongodb_exporter:
-    image: forekshub/percona-mongodb-exporter:latest
-    ports:
-      - "9216:9216"
-    environment:
-      - MONGODB_URL=mongodb://mongodb:27017
-    networks:
-      back_net:
-        aliases:
-          - mongodb-exporter
-  cloudprober:
-    image: ${USERNAME}/cloudprober
-    networks:
-      back_net:
-        aliases:
-          - cloudprober-exporter
-
+          - comment
+  
 volumes:
   post_db:
-  prometheus_data:
 
 networks:
   back_net:
   front_net:
+  prometheus_net:
