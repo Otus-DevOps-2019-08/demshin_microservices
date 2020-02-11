@@ -3,6 +3,11 @@
 demshin microservices repository
 [![Build Status](https://travis-ci.com/Otus-DevOps-2019-08/demshin_microservices.svg?branch=master)](https://travis-ci.com/Otus-DevOps-2019-08/demshin_microservices)
 
+## Homework-18. Kubernetes-10
+
+1. Kubernetes The Hard Way
+2. Task with *. No. :(
+
 ## Homework-17. Logging-1. Logging & tracing
 
 1. Update reddit app & build new docker images with `logging` tag.
