@@ -12,6 +12,7 @@ demshin microservices repository
 5. Use Dashboard for minikube.
 6. Create Namespace dev.
 7. Create GKE cluster. Add screenshot.
+8. Task with *. Create simple GKE cluster with terraform. See at `kubernetes/terraform`.
 
 ## Homework-18. Kubernetes-1
 
