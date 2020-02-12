@@ -3,7 +3,17 @@
 demshin microservices repository
 [![Build Status](https://travis-ci.com/Otus-DevOps-2019-08/demshin_microservices.svg?branch=master)](https://travis-ci.com/Otus-DevOps-2019-08/demshin_microservices)
 
-## Homework-18. Kubernetes-10
+## Homework-19. Kubernetes-2
+
+1. Install kubectl, minikube.
+2. Start cluster with minikube.
+3. Create Deployments for ui, comment, post, mongodb.
+4. Create Services for ui, comment, post, mongodb.
+5. Use Dashboard for minikube.
+6. Create Namespace dev.
+7. Create GKE cluster. Add screenshot.
+
+## Homework-18. Kubernetes-1
 
 1. Kubernetes The Hard Way
 2. Task with *. No. :(
