@@ -3,6 +3,17 @@
 demshin microservices repository
 [![Build Status](https://travis-ci.com/Otus-DevOps-2019-08/demshin_microservices.svg?branch=master)](https://travis-ci.com/Otus-DevOps-2019-08/demshin_microservices)
 
+## Homework-20. Kubernetes-3
+
+1. Experiments with kube-dns.
+2. Balancing with Service LoadBalancing.
+3. Balancing with Ingress.
+4. Setup https with Secret. Task with *. See at `kuberetes/reddit/ui-secret.yml`.
+5. Setup Network Policy for mongodb. See at `kubernetes/reddit/mongo-network-policy.yml`.
+6. Work mongo volumes.
+   1. Persistence volumes.
+   2. Dynamic Persistence volumes.
+
 ## Homework-19. Kubernetes-2
 
 1. Install kubectl, minikube.
