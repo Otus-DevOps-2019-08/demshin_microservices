@@ -1,0 +1,7 @@
+name: ui
+version: 1.0.0
+description: Otus reddit application UI
+maintainers:
+  - name: demshin
+    email: aleksandr@demsh.in
+appVersion: 1.0

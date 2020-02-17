@@ -3,6 +3,12 @@
 demshin microservices repository
 [![Build Status](https://travis-ci.com/Otus-DevOps-2019-08/demshin_microservices.svg?branch=master)](https://travis-ci.com/Otus-DevOps-2019-08/demshin_microservices)
 
+## Homework-21. Kubernetes-4
+
+1. Install helm.
+2. Create & use helm charts for reddit app.
+3. 
+
 ## Homework-20. Kubernetes-3
 
 1. Experiments with kube-dns.
